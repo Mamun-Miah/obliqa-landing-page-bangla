@@ -118,12 +118,12 @@ const page = () => {
               </ul>
               <div className="mt-6">
                 <div className="flex items-center space-x-4">
-                  <div className="avatar">
+                  <div className="">
                     <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center">
                       <Monitor className="w-8 h-8 text-purple-600" />
                     </div>
                   </div>
-                  <div className="avatar">
+                  <div className="">
                     <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center">
                       <Users className="w-8 h-8 text-yellow-600" />
                     </div>
@@ -157,7 +157,7 @@ const page = () => {
               </ul>
               <div className="mt-6 flex justify-center">
                 <div className="flex items-center space-x-4">
-                  <div className="avatar">
+                  <div className="">
                     <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center">
                       <Zap className="w-8 h-8 text-red-600" />
                     </div>
