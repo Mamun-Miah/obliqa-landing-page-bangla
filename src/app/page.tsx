@@ -21,7 +21,7 @@ const page = () => {
           {/* Left Section */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">বিশ্বাস তেরি হোক কাজের মাধ্যমেই</h1>
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">বিশ্বাস তৈরি হোক কাজের মাধ্যমেই</h1>
               <p className="text-lg text-gray-600 leading-relaxed">
                 ১০০% নিরাপদ ও নির্ভরযোগ্য সার্ভিস। আপনি ওয়েবসাইট দেখে সন্তুষ্ট না হলে, এক পয়সাও দিতে হবে না! আপনার সন্তুষ্টিই আমাদের
                 দায়িত্ব।
@@ -503,7 +503,7 @@ const page = () => {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">তাহলেই সীমিত সময়ের জন্য দেরি না করে এখনই অর্ডার করুন।</h2>
               <p className="text-gray-600 mb-6">
                 এখন অর্ডার করুন, ওয়েবসাইট ডেলিভারির পর পেমেন্ট করুন। তবু যদি সন্তুষ্ট না হন, একটাকাও দিতে হবে না। ডেলিভারি প্রসেসিং এর
-                পূর্বে কল করুন: ০১৮১৩২২২৪০১
+                পূর্বে কল করুন: +880 1706-803616
               </p>
               <button className="btn btn-accent btn-lg">অর্ডার করুন এখনি</button>
             </div>
