@@ -10,8 +10,11 @@ const hindSiliguri = Hind_Siliguri({
 });
 
 export const metadata: Metadata = {
-  title: "OBLIQA",
+  title: "OBLIQA IT SOLUTIONS",
   description: "OBLIQA - Website Development",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

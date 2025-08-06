@@ -116,7 +116,7 @@ const page = () => {
                   <span>প্রতিটি ওয়েবসাইট ১ বছর ফ্রি হোস্টিং</span>
                 </li>
               </ul>
-              <div className="mt-6">
+              <div className="mt-6 mx-auto">
                 <div className="flex items-center space-x-4">
                   <div className="">
                     <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center">
@@ -496,7 +496,7 @@ const page = () => {
       </div>
 
       {/* Footer CTA Section */}
-      <div className="bg-gradient-to-r from-green-600 to-green-700 py-16">
+      <div className="bg-[#c76824] py-16">
         <div className="container mx-auto px-4">
           <div className="card bg-white max-w-2xl mx-auto">
             <div className="card-body text-center">
