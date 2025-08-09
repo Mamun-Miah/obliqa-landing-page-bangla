@@ -14,10 +14,10 @@ const page = () => {
 
 const menuItems = [
     { label: "Home", href: "https://obliqa.com/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Contact Us", href: "/contactus" },
+    { label: "About", href: "https://obliqa.com/about" },
+    { label: "Services", href: "https://obliqa.com/services" },
+    { label: "Portfolio", href: "https://obliqa.com/portfolio" },
+    { label: "Contact Us", href: "https://obliqa.com/contactus" },
   ];
 
   return (
@@ -51,13 +51,13 @@ const menuItems = [
                 ))}
                 <li className="mt-2 flex gap-2 px-2">
                   <Link
-                    href="/login"
+                    href="https://crm.obliqa.com/index.php/signin"
                     className="btn btn-outline border-white text-white hover:bg-white hover:text-[#127a14] flex-grow"
                   >
                     লগইন
                   </Link>
                   <Link
-                    href="/signup"
+                    href="https://crm.obliqa.com/index.php/signup"
                     className="btn flex-grow"
                     style={{ backgroundColor: "#ff9800", color: "#fff" }}
                   >
@@ -103,13 +103,13 @@ const menuItems = [
             </Link>
 
             <Link
-              href="/login"
+              href="https://crm.obliqa.com/index.php/signin"
               className="btn btn-outline text-white border-white hover:bg-white hover:text-[#127a14]"
             >
               লগইন
             </Link>
             <Link
-              href="/signup"
+              href="https://crm.obliqa.com/index.php/signup"
               className="btn"
               style={{ backgroundColor: "#ff9800", color: "#fff" }}
             >
