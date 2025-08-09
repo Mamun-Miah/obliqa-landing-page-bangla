@@ -13,7 +13,7 @@ import Image from "next/image";
 const page = () => {
 
 const menuItems = [
-    { label: "Home", href: "/home" },
+    { label: "Home", href: "https://obliqa.com/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
     { label: "Portfolio", href: "/portfolio" },
@@ -22,7 +22,7 @@ const menuItems = [
 
   return (
     <>
-      <div className="relative min-h-screen bg-[#127a14]">
+      <div className="relative min-h-screen bg-[#209689]">
       {/* Navbar */}
       <div className="absolute top-4 left-6 right-6">
         <div className="navbar bg-transparent px-auto">
