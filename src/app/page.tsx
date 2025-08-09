@@ -188,7 +188,7 @@ const page = () => {
               <h3 className="card-title text-xl font-bold text-center mb-2">স্ট্যান্ডার্ড প্যাকেজ</h3>
               <p className="text-center text-gray-600 mb-4">ছোট ব্যবসার জন্য, স্বল্প খরচে একটি সুন্দর ওয়েবসাইট পান</p>
               <div className="text-center mb-6">
-                <span className="text-3xl font-bold text-purple-600">৪,৯৯০/-</span>
+                <span className="text-3xl font-bold text-purple-600">১৫৯৯০/-</span>
                 <span className="text-gray-600"> টাকা</span>
               </div>
               <ul className="space-y-2 mb-6">
@@ -254,7 +254,7 @@ const page = () => {
               <h3 className="card-title text-xl font-bold text-center mb-2">প্রিমিয়াম প্যাকেজ</h3>
               <p className="text-center text-gray-600 mb-4">মাঝারি ব্যবসার জন্য, আরও ফিচার ও সুবিধা সহ</p>
               <div className="text-center mb-6">
-                <span className="text-3xl font-bold text-purple-600">৭,৯৯০/-</span>
+                <span className="text-3xl font-bold text-purple-600">১৭৯৯০/-</span>
                 <span className="text-gray-600"> টাকা</span>
               </div>
               <ul className="space-y-2 mb-6">
@@ -325,7 +325,7 @@ const page = () => {
               <h3 className="card-title text-xl font-bold text-center mb-2">এন্টারপ্রাইজ প্যাকেজ</h3>
               <p className="text-center text-gray-600 mb-4">বড় ব্যবসার জন্য, সম্পূর্ণ ফিচার ও কাস্টমাইজেশন সহ</p>
               <div className="text-center mb-6">
-                <span className="text-3xl font-bold text-purple-600">১৫,৯৯০/-</span>
+                <span className="text-3xl font-bold text-purple-600">৩০৯৯০/-</span>
                 <span className="text-gray-600"> টাকা</span>
               </div>
               <ul className="space-y-2 mb-6">
