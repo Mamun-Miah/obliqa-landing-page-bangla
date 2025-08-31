@@ -2,149 +2,146 @@ import React from "react";
 import {
   Check,
   MessageCircle,
+  RulerDimensionLine,
   Monitor,
   Users,
   Zap,
   List,
   Eye,
+  BaggageClaim,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 const page = () => {
 
-const menuItems = [
+  const menuItems = [
     { label: "Home", href: "https://obliqa.com/" },
     { label: "About", href: "https://obliqa.com/about" },
     { label: "Services", href: "https://obliqa.com/services" },
     { label: "Portfolio", href: "https://obliqa.com/portfolio" },
-    { label: "Contact Us", href: "https://obliqa.com/contactus" },
+    { label: "Contact Us", href: "https://obliqa.com/contact" },
   ];
 
   return (
     <>
       <div className="relative min-h-screen bg-[#209689]">
-      {/* Navbar */}
-      <div className="absolute top-4 left-6 right-6">
-        <div className="navbar bg-transparent px-auto">
-          {/* Navbar Start: Logo + Mobile Dropdown */}
-          <div className="navbar-start">
-            <div className="dropdown">
-              <label tabIndex={0} className="btn btn-ghost lg:hidden" role="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+        {/* Navbar */}
+        <div className="absolute top-4 left-6 right-6">
+          <div className="navbar bg-transparent px-auto">
+            {/* Navbar Start: Logo + Mobile Dropdown */}
+            <div className="navbar-start">
+              <div className="dropdown">
+                <label tabIndex={0} className="btn btn-ghost lg:hidden" role="button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="font-sans menu menu-sm dropdown-content bg-[#127a14] rounded-box z-50 mt-3 w-52 p-2 shadow-lg text-white"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
-                </svg>
-              </label>
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content bg-[#127a14] rounded-box z-50 mt-3 w-52 p-2 shadow-lg text-white"
-              >
+                  {menuItems.map(({ label, href }) => (
+                    <Link key={label} href={href}><li>{label}</li></Link>
+                  ))}
+                  <li className="mt-2 flex gap-2 px-2">
+                    <Link
+                      href="https://crm.obliqa.com/index.php/signin"
+                      className="btn btn-outline border-white text-white hover:bg-orange-400 hover:text-white flex-grow"
+                    >
+                      লগইন
+                    </Link>
+                    <Link
+                      href="https://crm.obliqa.com/index.php/signup"
+                      className="btn btn-outline bg-transparent border-white flex-grow hover:bg-orange-400 hover:text-white"
+                    >
+                      সাইন আপ
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <Link href="/">
+                <Image
+                  src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
+                  alt="Logo"
+                  width={150}
+                  height={50}
+                  className="cursor-pointer hidden lg:block"
+                />
+              </Link>
+            </div>
+
+            {/* Navbar Center: Menu for lg+ */}
+            <div className="navbar-center hidden lg:flex">
+              <ul className="menu menu-horizontal px-1 text-white font-semibold text-lg gap-8">
                 {menuItems.map(({ label, href }) => (
-                  <li key={label}>
+                  <li key={label} className="hover:text-[#ff9800]">
                     <Link href={href}>{label}</Link>
                   </li>
                 ))}
-                <li className="mt-2 flex gap-2 px-2">
-                  <Link
-                    href="https://crm.obliqa.com/index.php/signin"
-                    className="btn btn-outline border-white text-white hover:bg-white hover:text-[#127a14] flex-grow"
-                  >
-                    লগইন
-                  </Link>
-                  <Link
-                    href="https://crm.obliqa.com/index.php/signup"
-                    className="btn flex-grow"
-                    style={{ backgroundColor: "#ff9800", color: "#fff" }}
-                  >
-                    সাইন আপ
-                  </Link>
-                </li>
               </ul>
             </div>
 
-            <Link href="/">
-              <Image
-                src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
-                alt="Logo"
-                width={150}
-                height={50}
-                className="cursor-pointer hidden lg:block"
-              />
-            </Link>
-          </div>
+            {/* Navbar End: Logo for mobile + Login/Signup */}
+            <div className="navbar-end flex items-center gap-3">
+              {/* Show logo on mobile here */}
+              <Link href="/">
+                <Image
+                  src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
+                  alt="Logo"
+                  width={100}
+                  height={35}
+                  className="cursor-pointer lg:hidden"
+                />
+              </Link>
 
-          {/* Navbar Center: Menu for lg+ */}
-          <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-white font-semibold text-lg gap-8">
-              {menuItems.map(({ label, href }) => (
-                <li key={label} className="hover:text-[#ff9800]">
-                  <Link href={href}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Navbar End: Logo for mobile + Login/Signup */}
-          <div className="navbar-end flex items-center gap-3">
-            {/* Show logo on mobile here */}
-            <Link href="/">
-              <Image
-                src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
-                alt="Logo"
-                width={100}
-                height={35}
-                className="cursor-pointer lg:hidden"
-              />
-            </Link>
-
-            <Link
-              href="https://crm.obliqa.com/index.php/signin"
-              className="btn btn-outline text-white border-white hover:bg-white hover:text-[#127a14]"
-            >
-              লগইন
-            </Link>
-            <Link
-              href="https://crm.obliqa.com/index.php/signup"
-              className="btn"
-              style={{ backgroundColor: "#ff9800", color: "#fff" }}
-            >
-              সাইন আপ
-            </Link>
+              <Link
+                href="https://crm.obliqa.com/index.php/signin"
+                className="btn btn-outline text-white border-white hover:bg-orange-400 hover:text-white"
+              >
+                লগইন
+              </Link>
+              <Link
+                href="https://crm.obliqa.com/index.php/signup"
+                className="btn btn-outline bg-transparent border-white hover:bg-orange-400 hover:text-white"
+              >
+                সাইন আপ
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Hero Content */}
-      <div className="hero min-h-screen">
-        <div className="hero-content text-center">
-          <div className="max-w-xl">
-            <h1 className="text-5xl leading-tight text-white font-bold">
-              নিশ্চিন্তে আগে সার্ভিস নিন, পরে পেমেন্ট করুন!
-            </h1>
-            <p className="py-6 text-xl leading-relaxed text-white">
+        {/* Hero Content */}
+        <div className="hero min-h-screen">
+          <div className="hero-content text-center mt-24">
+            <div className="max-w-xl">
+              <h1 className="text-5xl leading-tight text-white font-bold">
+                নিশ্চিন্তে আগে সার্ভিস নিন,<br /> পরে পেমেন্ট করুন!
+              </h1>
+              {/* <p className="py-6 text-xl leading-relaxed text-white">
               ওয়েবসাইট তৈরি এখন আরও সহজ এবং সুবিধাজনক,<br />
               আমরা দিচ্ছি এমন একটি অফার যা সাশ্রয়ী,<br />
               ঝামেলাবিহীন এবং সম্পূর্ণ রেডি টু ইউজ!
-            </p>
-            <button
-              className="btn border-none"
-              style={{
-                backgroundColor: "#ffffff",
-                color: "#127a14",
-                fontWeight: "bold",
-              }}
-            >
-              অর্ডার করতে চাই
-            </button>
+            </p> */}
+              <p className="py-6 text-xl leading-relaxed text-white">
+                আপনার ব্যবসার জন্য নিন সাশ্রয়ী, ঝামেলামুক্ত এবং রেডি টু ইউজ ওয়েবসাইট, যা আপনার ব্যাবসা কে করবে আরও উন্নত।
+                আমাদের প্রিমিয়াম অফার নিশ্চিত করছে ইউজার ফ্রেন্ডলি ডিজাইন, কার্যকরী ফিচার এবং দ্রুত ফলাফল। আজই শুরু করুন এবং আপনার অনলাইন ব্যাবসা শক্তিশালী করুন!
+              </p>
+              <button
+                className="btn btn-outline border-white bg-orange-400 hover:text-white hover:bg-transparent duration-300"
+              >
+                অর্ডার করতে চাই
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
       <div className=" bg-gradient-to-br from-purple-50 to-blue-50">
@@ -153,17 +150,29 @@ const menuItems = [
             {/* Left Section */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
                   বিশ্বাস তৈরি হোক কাজের মাধ্যমেই
                 </h1>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  ১০০% নিরাপদ ও নির্ভরযোগ্য সার্ভিস। আপনি ওয়েবসাইট দেখে
-                  সন্তুষ্ট না হলে, এক পয়সাও দিতে হবে না! আপনার সন্তুষ্টিই
-                  আমাদের দায়িত্ব।
+                  ✅ ১০০% নিরাপদ ও নির্ভরযোগ্য সার্ভিস।<br />
+                  ✅ আপনার সন্তুষ্টিই আমাদের দায়িত্ব ও অঙ্গীকার।<br />
+                  ✅ দ্রুততম সময়ে সেরা মানের সেবা নিশ্চিত করি।<br />
+                  ✅ অভিজ্ঞ ও দক্ষ টিম দ্বারা পরিচালিত।<br />
+                  ✅ সাশ্রয়ী মূল্যে প্রিমিয়াম মানের সেবা।<br />
+                  ✅ নিরবচ্ছিন্ন সাপোর্ট ও সহায়তা।<br />
+                  ✅ আপনার প্রয়োজন অনুযায়ী কাস্টমাইজড সমাধান।<br />
+                  ✅ প্রতিটি প্রজেক্টে আধুনিক প্রযুক্তি ও সেরা প্র্যাকটিস অনুসরণ করি।<br />
+                  ✅ ক্লায়েন্টের আইডিয়া ও ভিশনকে গুরুত্ব দিয়ে কাজ করি।<br />
+                  ✅ দীর্ঘমেয়াদী সম্পর্ক ও আস্থার ভিত্তিতে সার্ভিস প্রদান করি।<br />
+                  ✅ আন্তর্জাতিক মান বজায় রেখে ইউজার-ফ্রেন্ডলি ও রেসপন্সিভ ওয়েবসাইট তৈরি করি।<br />
+                  ✅ ব্যবসার লক্ষ্য পূরণে কার্যকর ডিজিটাল সমাধান নিশ্চিত করি।<br />
                 </p>
+
               </div>
 
-              <button className="btn btn-accent btn-lg text-lg">
+              <button
+                className="btn btn-outline shadow border-black btn-lg bg-orange-400 hover:text-orange-400 hover:bg-transparent duration-300"
+              >
                 কথা বলতে চাই
               </button>
             </div>
@@ -172,50 +181,53 @@ const menuItems = [
             <div className="space-y-8">
               {/* Project Management */}
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-white" />
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+                  <RulerDimensionLine className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-gray-900">
                     প্রজেক্ট ম্যানেজমেন্ট
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    আমাদের টিম একটি নিউরোলজি ও স্টেপ-বাই-স্টেপ প্রসেস অনুসরণ
-                    করে, যাতে আপনার ওয়েবসাইট সময়মতো ও মানসম্পন্নভাবে ডেলিভারি
-                    হয়।
+                    আমাদের অভিজ্ঞ টিম একটি ধাপে ধাপে সুসংগঠিত প্রক্রিয়া অনুসরণ করে, যা কার্যকর প্রজেক্ট ম্যানেজমেন্ট নিশ্চিত করে। প্রতিটি ধাপ নির্ধারিত সময়সীমার মধ্যে সম্পন্ন করা হয়, যাতে আপনার ওয়েবসাইট নির্ধারিত সময়ে, ঝামেলামুক্তভাবে এবং সর্বোচ্চ মান বজায় রেখে ডেলিভার করা যায়।
                   </p>
                 </div>
               </div>
 
               {/* Creative Work List */}
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
                   <List className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-gray-900">
-                    ক্রিয়ার কাজের তালিকা
+                    আমাদের কাজের প্রক্রিয়া
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    প্রতিটি ওয়েবসাইট বানানোর আগে আমরা ক্লায়েন্টের প্রত্যাশা
-                    অনুযায়ী একটি কমপ্লিট তৈরি করি, যাতে কিছু বাদ না যায়।
+                    প্রতিটি ওয়েবসাইট ডেভেলপমেন্ট শুরুর আগে আমরা ক্লায়েন্টের চাহিদা ও লক্ষ্য গভীরভাবে বিশ্লেষণ করি। এরপর একটি সম্পূর্ণ পরিকল্পনা ও স্ট্র্যাটেজি তৈরি করি, যাতে প্রজেক্টের প্রতিটি ধাপ স্পষ্টভাবে নির্ধারিত থাকে এবং কোনো গুরুত্বপূর্ণ অংশ বাদ না যায়। এর মাধ্যমে আমরা নিশ্চিত করি যে, ফাইনাল ওয়েবসাইটটি ক্লায়েন্টের প্রত্যাশার সাথে সামঞ্জস্যপূর্ণ এবং ব্যবসায়িক লক্ষ্যে কার্যকরভাবে সহায়ক হবে।
                   </p>
                 </div>
               </div>
 
               {/* Customer Follower View */}
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
                   <Eye className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-gray-900">
-                    কাস্টমারি অনুসারী ভিউ
+                    কাস্টমাইজড ভিউ ও স্ট্র্যাটেজি
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    আপনার ব্যবসা যদি ই-কমার্স, সার্ভিস বা পার্সোনাল ব্র্যান্ডিং
-                    হয়, আমরা সেই অনুযায়ী ডিজাইনিং সাজেশন, কনটেন্ট রেকমেন্ড ও
-                    ফিচার যুক্ত করি।
+                    প্রতিটি ব্যবসার লক্ষ্য আলাদা, তাই আমরা দিই সম্পূর্ণ কাস্টমাইজ সমাধান। আপনার ব্যবসা যদি ই-কমার্স, সার্ভিস বা পার্সোনাল ব্র্যান্ডিং হয়,<br /> আমরা প্রদান করবো আপনার প্রয়োজন অনুযায়ী:<br />
+
+                    🎨 ইউনিক ও প্রফেশনাল ডিজাইন সাজেশন <br />
+
+                    ✍️ কনটেন্ট স্ট্র্যাটেজি ও রেকমেন্ডেশন <br />
+
+                    ⚙️ সঠিক ফিচার ও ফাংশনালিটি ইন্টিগ্রেশন <br />
+
+                    আমাদের লক্ষ্য শুধু একটি ওয়েবসাইট বানানো নয়, বরং এমন একটি ডিজিটাল অভিজ্ঞতা তৈরি করা, যা আপনার ব্র্যান্ডকে প্রতিযোগীদের থেকে আলাদা করে তুলে ধরে।
                   </p>
                 </div>
               </div>
@@ -233,107 +245,86 @@ const menuItems = [
 
       <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
         {/* Why Choose Us & How to Order Section */}
-        <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {/* Why Choose Us Card */}
-            <div className="card bg-white shadow-lg border border-purple-200">
-              <div className="card-body">
-                <h2 className="card-title text-2xl font-bold text-gray-900 mb-4">
-                  কেন আমাদের সার্ভিস নিবেন?
-                </h2>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">১.</span>
-                    <span>অভিজ্ঞ টিম, নতুন টিম</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">২.</span>
-                    <span>Livespeed ওয়েবসাইট/মোবাইল অ্যাপ</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">৩.</span>
-                    <span>সম্পূর্ণ ওয়েবসাইট SEO Friendly</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">৪.</span>
-                    <span>২৪/৭ সাপোর্ট (Messenger, WhatsApp, Call)</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">৫.</span>
-                    <span>প্রতিটি ওয়েবসাইট ১ বছর ফ্রি হোস্টিং</span>
-                  </li>
-                </ul>
-                <div className="mt-6 mx-auto">
-                  <div className="flex items-center space-x-4">
-                    <div className="">
-                      <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center">
-                        <Monitor className="w-8 h-8 text-purple-600" />
-                      </div>
-                    </div>
-                    <div className="">
-                      <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center">
-                        <Users className="w-8 h-8 text-yellow-600" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="grid md:grid-cols-2 gap-10 mb-16">
+          {/* Why Choose Us Card */}
+          <div className="bg-white shadow-xl border border-purple-100 rounded-2xl p-8">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+              কেন আমাদের সার্ভিস বেছে নেবেন?
+            </h2>
+            <ul className="space-y-2 text-gray-700 text-lg leading-snug">
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-500 font-bold">১.</span>
+                <span>অভিজ্ঞ ও দক্ষ টিম, যাদের রয়েছে দীর্ঘদিনের বাস্তব অভিজ্ঞতা।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-500 font-bold">২.</span>
+                <span>অত্যন্ত দ্রুতগতির (Livespeed) ওয়েবসাইট ও মোবাইল অ্যাপ ডেভেলপমেন্ট।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-500 font-bold">৩.</span>
+                <span>সম্পূর্ণ SEO Friendly ও User-Friendly ডিজাইন।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-500 font-bold">৪.</span>
+                <span>২৪/৭ সাপোর্ট (Messenger, WhatsApp, Call & Email)।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-500 font-bold">৫.</span>
+                <span>প্রতিটি প্রজেক্টে ১ বছর ফ্রি হোস্টিং ও টেকনিক্যাল সাপোর্ট।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-500 font-bold">৬.</span>
+                <span>আন্তর্জাতিক মান বজায় রেখে সাশ্রয়ী মূল্যে সেবা প্রদান।</span>
+              </li>
+            </ul>
 
-            {/* How to Order Card */}
-            <div className="card bg-white shadow-lg border border-purple-200">
-              <div className="card-body">
-                <h2 className="card-title text-2xl font-bold text-gray-900 mb-4">
-                  কিভাবে অর্ডার করবেন?
-                </h2>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">১.</span>
-                    <span>নিচে আমাদের যেকোনো প্যাকেজ থেকে পছন্দ করুন</span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">২.</span>
-                    <span>
-                      প্রয়োজনীয় তথ্য দিয়ে অর্ডার করার জন্য ক্লিক করুন
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">৩.</span>
-                    <span>
-                      আমরা আপনার সাথে যোগাযোগ করব এবং বিস্তারিত আলোচনার মাধ্যমে
-                      কাজ শুরু করব
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="text-purple-600 font-bold">৪.</span>
-                    <span>
-                      আমাদের দক্ষ ডেভেলপারী টিম ৭-১৫ কার্য দিবসে আপনার ওয়েবসাইট
-                      সম্পন্ন করে ডেলিভারি দেবে
-                    </span>
-                  </li>
-                </ul>
-                <div className="mt-6 flex justify-center">
-                  <div className="flex items-center space-x-4">
-                    <div className="">
-                      <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center">
-                        <Zap className="w-8 h-8 text-red-600" />
-                      </div>
-                    </div>
-                    <div className="mockup-browser bg-base-300 w-32 h-20 scale-75">
-                      <div className="mockup-browser-toolbar">
-                        <div className="input">website.com</div>
-                      </div>
-                      <div className="flex justify-center px-4 py-2 bg-base-200">
-                        <div className="w-full h-8 bg-purple-200 rounded"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="mt-6 flex items-center justify-center space-x-6">
+              <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center shadow-md">
+                <Monitor className="w-8 h-8 text-orange-400" />
+              </div>
+              <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center shadow-md">
+                <Users className="w-8 h-8 text-orange-400" />
               </div>
             </div>
           </div>
 
-          {/* Pricing Packages Section */}
+          {/* How to Order Card */}
+          <div className="bg-white shadow-xl border border-purple-100 rounded-2xl p-8">
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+              কিভাবে অর্ডার করবেন?
+            </h2>
+            <ul className="space-y-2 text-gray-700 text-lg leading-snug">
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-400 font-bold">১.</span>
+                <span>আমাদের যেকোনো প্যাকেজ থেকে আপনার প্রয়োজন অনুযায়ী একটি বেছে নিন।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-400 font-bold">২.</span>
+                <span>প্রয়োজনীয় তথ্য পূরণ করে অর্ডার কনফার্ম করুন।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-400 font-bold">৩.</span>
+                <span>আমাদের টিম আপনার সাথে যোগাযোগ করে বিস্তারিত আলোচনা করবে।</span>
+              </li>
+              <li className="flex items-start space-x-2">
+                <span className="text-orange-400 font-bold">৪.</span>
+                <span>৭-১৫ কার্যদিবসের মধ্যে আপনার ওয়েবসাইট সম্পূর্ণ করে ডেলিভারি করা হবে।</span>
+              </li>
+            </ul>
+
+            <div className="mt-6 flex items-center justify-center space-x-6">
+              <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center shadow-md">
+                <Zap className="w-8 h-8 text-orange-400" />
+              </div>
+              <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center shadow-md">
+                <BaggageClaim className="w-8 h-8 text-orange-400" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Prcing & FAQ */}
+        <div className="text-gray-600">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-8">
               আমাদের ওয়েবসাইট প্যাকেজ সমূহ
