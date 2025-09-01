@@ -109,7 +109,7 @@ const page = () => {
               </Link>
               <Link
                 href="https://crm.obliqa.com/index.php/signup"
-                className="btn btn-outline bg-transparent border-white hover:bg-orange-400 hover:text-white"
+                className="btn btn-outline bg-orange-500 hover:bg-transparent border-white  hover:text-white"
               >
                 সাইন আপ
               </Link>
@@ -122,7 +122,7 @@ const page = () => {
           <div className="hero-content text-center mt-24">
             <div className="max-w-xl">
               <h1 className="text-5xl leading-tight text-white font-bold">
-                নিশ্চিন্তে আগে সার্ভিস নিন,<br /> পরে পেমেন্ট করুন!
+                নিশ্চিন্তে সার্ভিস নিন,<br /> পরে পেমেন্ট করুন!
               </h1>
               {/* <p className="py-6 text-xl leading-relaxed text-white">
               ওয়েবসাইট তৈরি এখন আরও সহজ এবং সুবিধাজনক,<br />
