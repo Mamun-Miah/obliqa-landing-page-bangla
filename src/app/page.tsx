@@ -144,7 +144,7 @@ const page = () => {
       </div>
 
 
-      <div className=" bg-gradient-to-br from-purple-50 to-blue-50 px-4">
+      <div className=" bg-gradient-to-br from-purple-50 to-blue-50 px-12">
         <div className="container mx-auto px-4 py-12 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Section */}
@@ -243,7 +243,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 px-12">
         {/* Why Choose Us & How to Order Section */}
         <div className="grid md:grid-cols-2 gap-10 mb-16">
           {/* Why Choose Us Card */}
@@ -740,7 +740,10 @@ const page = () => {
         </div>
 
         {/* Footer CTA Section */}
-        <div className="bg-[#c76824] py-16">
+        
+      </div>
+      <div className="bg-[#c76824]">
+         <div className=" py-16">
           <div className="container mx-auto px-4">
             <div className="card bg-white max-w-2xl mx-auto">
               <div className="card-body text-center">
@@ -766,7 +769,9 @@ const page = () => {
             <MessageCircle className="w-6 h-6" />
           </button>
         </div>
+
       </div>
+     
     </>
   );
 };
