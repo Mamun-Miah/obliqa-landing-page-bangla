@@ -144,7 +144,7 @@ const page = () => {
       </div>
 
 
-      <div className=" bg-gradient-to-br from-purple-50 to-blue-50 px-12">
+      <div className=" bg-gradient-to-br from-purple-50 to-blue-50 px-4 lg:px-12">
         <div className="container mx-auto px-4 py-12 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Section */}
@@ -178,10 +178,10 @@ const page = () => {
             </div>
 
             {/* Right Section */}
-            <div className="space-y-8 px-4">
+            <div className="space-y-8 px-2">
               {/* Project Management */}
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+              <div className="lg:flex max-md:flex-col items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center lg:mb-0 mb-5">
                   <RulerDimensionLine className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-2">
@@ -195,8 +195,8 @@ const page = () => {
               </div>
 
               {/* Creative Work List */}
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+              <div className="lg:flex max-md:flex-col items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 lg:mb-0 mb-5  bg-orange-400 rounded-full flex items-center justify-center">
                   <List className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-2">
@@ -210,8 +210,8 @@ const page = () => {
               </div>
 
               {/* Customer Follower View */}
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
+              <div className="lg:flex max-md:flex-col items-start space-x-4">
+                <div className="flex-shrink-0 lg:mb-0 mb-5 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
                   <Eye className="w-6 h-6 text-white" />
                 </div>
                 <div className="space-y-2">
@@ -243,7 +243,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 px-12">
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 px-4 lg:px-12">
         {/* Why Choose Us & How to Order Section */}
         <div className="grid md:grid-cols-2 gap-10 mb-16">
           {/* Why Choose Us Card */}
@@ -324,7 +324,7 @@ const page = () => {
         </div>
 
         {/* Prcing & FAQ */}
-        <div className="text-gray-600 px-4">
+        <div className="text-gray-600 px-2">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-8">
               আমাদের ওয়েবসাইট প্যাকেজ সমূহ
