@@ -144,7 +144,7 @@ const page = () => {
       </div>
 
 
-      <div className=" bg-gradient-to-br from-purple-50 to-blue-50">
+      <div className=" bg-gradient-to-br from-purple-50 to-blue-50 px-4">
         <div className="container mx-auto px-4 py-12 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Section */}
@@ -178,7 +178,7 @@ const page = () => {
             </div>
 
             {/* Right Section */}
-            <div className="space-y-8">
+            <div className="space-y-8 px-4">
               {/* Project Management */}
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-orange-400 rounded-full flex items-center justify-center">
@@ -243,7 +243,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 px-4">
         {/* Why Choose Us & How to Order Section */}
         <div className="grid md:grid-cols-2 gap-10 mb-16">
           {/* Why Choose Us Card */}
@@ -289,7 +289,7 @@ const page = () => {
           </div>
 
           {/* How to Order Card */}
-          <div className="bg-white shadow-xl border border-purple-100 rounded-2xl p-8">
+          <div className="flex flex-col bg-white shadow-xl border border-purple-100 rounded-2xl p-8">
             <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
               কিভাবে অর্ডার করবেন?
             </h2>
@@ -312,7 +312,7 @@ const page = () => {
               </li>
             </ul>
 
-            <div className="mt-6 flex items-center justify-center space-x-6">
+            <div className=" flex-grow items-end mt-6 flex justify-center space-x-6">
               <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center shadow-md">
                 <Zap className="w-8 h-8 text-orange-400" />
               </div>
@@ -324,7 +324,7 @@ const page = () => {
         </div>
 
         {/* Prcing & FAQ */}
-        <div className="text-gray-600">
+        <div className="text-gray-600 px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-8">
               আমাদের ওয়েবসাইট প্যাকেজ সমূহ
@@ -568,172 +568,172 @@ const page = () => {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* FAQ Section */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+            প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQs)
+          </h2>
 
-          {/* FAQ Section */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-              প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQs)
-            </h2>
-
-            <div className="space-y-4 max-w-4xl mx-auto">
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" defaultChecked />
-                <div className="collapse-title text-xl font-medium">
-                  ওয়েবসাইট ডেলিভারির পর কতো দিন পর্যন্ত সাপোর্ট পাবো?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    প্যাকেজ অনুযায়ী আলাদা আলাদা সময় পর্যন্ত সাপোর্ট পাবেন।
-                    স্ট্যান্ডার্ড প্যাকেজে ৩০ দিন, প্রিমিয়াম প্যাকেজে ৬০ দিন
-                    এবং এন্টারপ্রাইজ প্যাকেজে ৯০ দিন।
-                  </p>
-                </div>
+          <div className="space-y-4 max-w-4xl mx-auto">
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" defaultChecked />
+              <div className="collapse-title text-xl font-medium">
+                ওয়েবসাইট ডেলিভারির পর কতো দিন পর্যন্ত সাপোর্ট পাবো?
               </div>
-
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  ওয়েবসাইট কি ডেস্কটপ, মোবাইলসহ সব ডিভাইসে ভাল দেখাবে?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    হ্যাঁ, আমাদের সকল ওয়েবসাইট রেসপন্সিভ ডিজাইনে তৈরি করা হয়
-                    যা সব ডিভাইসে পারফেক্ট দেখায়।
-                  </p>
-                </div>
+              <div className="collapse-content">
+                <p>
+                  প্যাকেজ অনুযায়ী আলাদা আলাদা সময় পর্যন্ত সাপোর্ট পাবেন।
+                  স্ট্যান্ডার্ড প্যাকেজে ৩০ দিন, প্রিমিয়াম প্যাকেজে ৬০ দিন
+                  এবং এন্টারপ্রাইজ প্যাকেজে ৯০ দিন।
+                </p>
               </div>
+            </div>
 
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  ওয়েবসাইটের কনটেন্ট (লেখা/ছবি) কি আমাকে দিতে হবে?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    আমরা আপনার ব্যবসার তথ্য, ছবি এবং কনটেন্ট সংগ্রহ করে
-                    ওয়েবসাইট তৈরি করি। তবে আপনার নিজস্ব কনটেন্ট থাকলে সেটা আরও
-                    ভালো হবে।
-                  </p>
-                </div>
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                ওয়েবসাইট কি ডেস্কটপ, মোবাইলসহ সব ডিভাইসে ভাল দেখাবে?
               </div>
-
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  আমার কোন টেকনিক্যাল জ্ঞান নেই, তবু কি আমি ওয়েবসাইট পরিচালনা
-                  করতে পারবো?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    অবশ্যই! আমরা খুবই সহজ কনটেন্ট ম্যানেজমেন্ট সিস্টেম ব্যবহার
-                    করি যা কোন টেকনিক্যাল জ্ঞান ছাড়াই পরিচালনা করা যায়।
-                  </p>
-                </div>
+              <div className="collapse-content">
+                <p>
+                  হ্যাঁ, আমাদের সকল ওয়েবসাইট রেসপন্সিভ ডিজাইনে তৈরি করা হয়
+                  যা সব ডিভাইসে পারফেক্ট দেখায়।
+                </p>
               </div>
+            </div>
 
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  ডোমেইন ও হোস্টিং কি আলাদা নাম রেজিস্ট্রেশন করতে হবে?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    না, আমরা আপনার জন্য ডোমেইন রেজিস্ট্রেশন এবং হোস্টিং সেটআপ
-                    করে দেই। আপনাকে আলাদা কিছু করতে হবে না।
-                  </p>
-                </div>
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                ওয়েবসাইটের কনটেন্ট (লেখা/ছবি) কি আমাকে দিতে হবে?
               </div>
-
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  পেমেন্ট কিভাবে করব? নাকি অ্যাডভান্স টাকা দিতে হবে?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    আমরা বিকাশ, নগদ, রকেট এবং ব্যাংক ট্রান্সফারের মাধ্যমে
-                    পেমেন্ট গ্রহণ করি। ৫০% অ্যাডভান্স এবং বাকি ৫০% ডেলিভারির
-                    সময়।
-                  </p>
-                </div>
+              <div className="collapse-content">
+                <p>
+                  আমরা আপনার ব্যবসার তথ্য, ছবি এবং কনটেন্ট সংগ্রহ করে
+                  ওয়েবসাইট তৈরি করি। তবে আপনার নিজস্ব কনটেন্ট থাকলে সেটা আরও
+                  ভালো হবে।
+                </p>
               </div>
+            </div>
 
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  ওয়েবসাইট রিভিশন করতে চাই টাকা লাগবে?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    প্রতিটি প্যাকেজে নির্দিষ্ট সংখ্যক রিভিশন ফ্রি দেওয়া হয়।
-                    অতিরিক্ত রিভিশনের জন্য আলাদা চার্জ প্রযোজ্য।
-                  </p>
-                </div>
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                আমার কোন টেকনিক্যাল জ্ঞান নেই, তবু কি আমি ওয়েবসাইট পরিচালনা
+                করতে পারবো?
               </div>
-
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  আমার ওয়েবসাইট-এ কিভাবে আরো, আমাকে কি সময় দিতে হবে?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    হ্যাঁ, ওয়েবসাইট তৈরির সময় আমাদের সাথে নিয়মিত যোগাযোগ
-                    রাখতে হবে এবং প্রয়োজনীয় তথ্য ও ফিডব্যাক দিতে হবে।
-                  </p>
-                </div>
+              <div className="collapse-content">
+                <p>
+                  অবশ্যই! আমরা খুবই সহজ কনটেন্ট ম্যানেজমেন্ট সিস্টেম ব্যবহার
+                  করি যা কোন টেকনিক্যাল জ্ঞান ছাড়াই পরিচালনা করা যায়।
+                </p>
               </div>
+            </div>
 
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  ওয়েবসাইটের এডমিনিস্ট্রেটর প্যানেল কি আমাকে দেওয়া হবে?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    হ্যাঁ, ওয়েবসাইট ডেলিভারির সময় আপনাকে সম্পূর্ণ এডমিন
-                    প্যানেলের এক্সেস দেওয়া হবে।
-                  </p>
-                </div>
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                ডোমেইন ও হোস্টিং কি আলাদা নাম রেজিস্ট্রেশন করতে হবে?
               </div>
-
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  আমি কি রেডিমেড টেমপ্লেট পেয়ে ওয়েবসাইট পেতে পারি?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    আমরা কাস্টম ডিজাইন করি, তবে আপনি চাইলে রেডিমেড টেমপ্লেট
-                    কাস্টমাইজ করেও ওয়েবসাইট তৈরি করতে পারি।
-                  </p>
-                </div>
+              <div className="collapse-content">
+                <p>
+                  না, আমরা আপনার জন্য ডোমেইন রেজিস্ট্রেশন এবং হোস্টিং সেটআপ
+                  করে দেই। আপনাকে আলাদা কিছু করতে হবে না।
+                </p>
               </div>
+            </div>
 
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  আমি কি রেডিমেড টেমপ্লেট পেয়ে ওয়েবসাইট পেতে পারি?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    আমাদের সাথে যোগাযোগ করুন হোয়াটসঅ্যাপ/কল/মেসেঞ্জারে। আমরা
-                    আপনার প্রয়োজন অনুযায়ী সমাধান দেব।
-                  </p>
-                </div>
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                পেমেন্ট কিভাবে করব? নাকি অ্যাডভান্স টাকা দিতে হবে?
               </div>
+              <div className="collapse-content">
+                <p>
+                  আমরা বিকাশ, নগদ, রকেট এবং ব্যাংক ট্রান্সফারের মাধ্যমে
+                  পেমেন্ট গ্রহণ করি। ৫০% অ্যাডভান্স এবং বাকি ৫০% ডেলিভারির
+                  সময়।
+                </p>
+              </div>
+            </div>
 
-              <div className="collapse collapse-plus bg-white shadow-lg">
-                <input type="radio" name="faq-accordion" />
-                <div className="collapse-title text-xl font-medium">
-                  নেক্সট কিভাবে করবো?
-                </div>
-                <div className="collapse-content">
-                  <p>
-                    আমাদের সাথে যোগাযোগ করুন এবং আপনার প্রয়োজন জানান। আমরা
-                    আপনাকে সঠিক গাইডলাইন দেব।
-                  </p>
-                </div>
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                ওয়েবসাইট রিভিশন করতে চাই টাকা লাগবে?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  প্রতিটি প্যাকেজে নির্দিষ্ট সংখ্যক রিভিশন ফ্রি দেওয়া হয়।
+                  অতিরিক্ত রিভিশনের জন্য আলাদা চার্জ প্রযোজ্য।
+                </p>
+              </div>
+            </div>
+
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                আমার ওয়েবসাইট-এ কিভাবে আরো, আমাকে কি সময় দিতে হবে?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  হ্যাঁ, ওয়েবসাইট তৈরির সময় আমাদের সাথে নিয়মিত যোগাযোগ
+                  রাখতে হবে এবং প্রয়োজনীয় তথ্য ও ফিডব্যাক দিতে হবে।
+                </p>
+              </div>
+            </div>
+
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                ওয়েবসাইটের এডমিনিস্ট্রেটর প্যানেল কি আমাকে দেওয়া হবে?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  হ্যাঁ, ওয়েবসাইট ডেলিভারির সময় আপনাকে সম্পূর্ণ এডমিন
+                  প্যানেলের এক্সেস দেওয়া হবে।
+                </p>
+              </div>
+            </div>
+
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                আমি কি রেডিমেড টেমপ্লেট পেয়ে ওয়েবসাইট পেতে পারি?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  আমরা কাস্টম ডিজাইন করি, তবে আপনি চাইলে রেডিমেড টেমপ্লেট
+                  কাস্টমাইজ করেও ওয়েবসাইট তৈরি করতে পারি।
+                </p>
+              </div>
+            </div>
+
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                আমি কি রেডিমেড টেমপ্লেট পেয়ে ওয়েবসাইট পেতে পারি?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  আমাদের সাথে যোগাযোগ করুন হোয়াটসঅ্যাপ/কল/মেসেঞ্জারে। আমরা
+                  আপনার প্রয়োজন অনুযায়ী সমাধান দেব।
+                </p>
+              </div>
+            </div>
+
+            <div className="collapse collapse-plus bg-white shadow-lg">
+              <input type="radio" name="faq-accordion" />
+              <div className="collapse-title text-xl font-medium">
+                নেক্সট কিভাবে করবো?
+              </div>
+              <div className="collapse-content">
+                <p>
+                  আমাদের সাথে যোগাযোগ করুন এবং আপনার প্রয়োজন জানান। আমরা
+                  আপনাকে সঠিক গাইডলাইন দেব।
+                </p>
               </div>
             </div>
           </div>
