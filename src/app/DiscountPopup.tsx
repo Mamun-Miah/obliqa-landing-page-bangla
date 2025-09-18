@@ -35,7 +35,7 @@ export default function DiscountPopup() {
 
           {/* Discount Image */}
           <Image
-            src="/Popup image.png"
+            src="/popup-image.png"
             alt="Discount Offer"
             width={500}
             height={300}
