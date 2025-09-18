@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function DiscountPopup() {
   const [show, setShow] = useState(false);
@@ -32,8 +33,7 @@ export default function DiscountPopup() {
         </button>
 
         {/* Discount Image */}
-        <img
-          src="./Popup image.png"
+        <Image src="./Popup image.png"
           alt="Discount Offer"
           className="rounded-xl w-full h-1/2"
         />
