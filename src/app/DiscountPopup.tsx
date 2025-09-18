@@ -5,10 +5,39 @@ import { motion } from "framer-motion"
 
 export default function ObliQADiscountPopup() {
   const [show, setShow] = useState(false)
+  const [timeLeft, setTimeLeft] = useState({
+    days: 7,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
 
   useEffect(() => {
     // Page লোড হলেই popup show হবে
     setShow(true)
+  }, [])
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prevTime) => {
+        const totalSeconds =
+          prevTime.days * 24 * 60 * 60 + prevTime.hours * 60 * 60 + prevTime.minutes * 60 + prevTime.seconds - 1
+
+        if (totalSeconds <= 0) {
+          clearInterval(timer)
+          return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+        }
+
+        const days = Math.floor(totalSeconds / (24 * 60 * 60))
+        const hours = Math.floor((totalSeconds % (24 * 60 * 60)) / (60 * 60))
+        const minutes = Math.floor((totalSeconds % (60 * 60)) / 60)
+        const seconds = totalSeconds % 60
+
+        return { days, hours, minutes, seconds }
+      })
+    }, 1000)
+
+    return () => clearInterval(timer)
   }, [])
 
   if (!show) return null
@@ -60,6 +89,28 @@ export default function ObliQADiscountPopup() {
                   <div className="absolute left-0 top-0 bottom-0 w-4 bg-orange-400 transform -skew-x-12"></div>
                   <div className="absolute right-0 top-0 bottom-0 w-4 bg-orange-400 transform skew-x-12"></div>
                   <h2 className="text-2xl font-bold">৫০% ছাড়</h2>
+                </div>
+              </div>
+
+              <div className="mb-4 p-4 bg-red-50 rounded-lg border-2 border-red-200">
+                <p className="text-red-600 font-bold text-sm mb-2">অফার শেষ হবে:</p>
+                <div className="flex justify-center gap-2">
+                  <div className="bg-red-600 text-white px-3 py-2 rounded-lg text-center min-w-[50px]">
+                    <div className="text-lg font-bold">{timeLeft.days}</div>
+                    <div className="text-xs">দিন</div>
+                  </div>
+                  <div className="bg-red-600 text-white px-3 py-2 rounded-lg text-center min-w-[50px]">
+                    <div className="text-lg font-bold">{timeLeft.hours}</div>
+                    <div className="text-xs">ঘন্টা</div>
+                  </div>
+                  <div className="bg-red-600 text-white px-3 py-2 rounded-lg text-center min-w-[50px]">
+                    <div className="text-lg font-bold">{timeLeft.minutes}</div>
+                    <div className="text-xs">মিনিট</div>
+                  </div>
+                  <div className="bg-red-600 text-white px-3 py-2 rounded-lg text-center min-w-[50px]">
+                    <div className="text-lg font-bold">{timeLeft.seconds}</div>
+                    <div className="text-xs">সেকেন্ড</div>
+                  </div>
                 </div>
               </div>
 
