@@ -14,6 +14,7 @@ import Image from "next/image";
 import Price from "./price";
 import Faq from "./Faq";
 import Footer from "./Footer";
+import DiscountPopup from "./DiscountPopup";
 const page = () => {
 
   const menuItems = [
@@ -26,6 +27,7 @@ const page = () => {
 
   return (
     <>
+      <DiscountPopup />
       <div className="relative min-h-screen bg-[#209689]">
         {/* Navbar */}
         <div className="absolute top-4 left-6 right-6">
@@ -329,7 +331,7 @@ const page = () => {
       {/* Footer CTA Section */}
       <Footer />
 
-    </>
+  </>
   );
 };
 

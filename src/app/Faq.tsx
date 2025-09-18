@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Faq() {
   return (
-    <div className="mb-16 text-gray-900">
+    <div className="pb-16 text-gray-900">
       <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
         প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী (FAQs)
       </h2>

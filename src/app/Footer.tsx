@@ -1,36 +1,111 @@
-import { MessageCircle } from 'lucide-react'
-import React from 'react'
+"use client";
 
-export default function Footer() {
+import Image from "next/image";
+import Link from "next/link";
+import {
+  TiSocialFacebook,
+  TiSocialInstagram,
+  TiSocialLinkedin,
+} from "react-icons/ti";
+
+const Footer = () => {
   return (
-    <div className="bg-[#c76824]">
-      <div className=" py-16">
-        <div className="container mx-auto px-4">
-          <div className="card bg-white max-w-2xl mx-auto">
-            <div className="card-body text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                তাহলেই সীমিত সময়ের জন্য দেরি না করে এখনই অর্ডার করুন।
-              </h2>
-              <p className="text-gray-600 mb-6">
-                এখন অর্ডার করুন, ওয়েবসাইট ডেলিভারির পর পেমেন্ট করুন। তবু যদি
-                সন্তুষ্ট না হন, একটাকাও দিতে হবে না। ডেলিভারি প্রসেসিং এর
-                পূর্বে কল করুন: +880 1706-803616
-              </p>
-              <button className="btn btn-accent btn-lg">
-                অর্ডার করুন এখনি
-              </button>
+    <div>
+      <footer className="grid lg:gap-8 lg:grid-cols-4 bg-[#263238] text-white min-h-80 py-12 px-5 pt-8">
+        {/* Logo + Social Links */}
+        <div>
+          <nav className="flex flex-col gap-4 items-center my-4">
+            <Image src='./logo.svg' alt="Company Logo" width={160} height={80} />
+            <div className="flex gap-4">
+              <a
+                className="text-3xl"
+                href="https://www.facebook.com/people/OBLIQA-IT-Solutions/61574924409322/?mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TiSocialFacebook />
+              </a>
+              <a
+                className="text-3xl"
+                href="https://www.linkedin.com/company/obliqa-it-solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TiSocialLinkedin />
+              </a>
+              <a
+                className="text-3xl"
+                href="https://www.instagram.com/obliqa_it_solutions/?igsh=MWlpNTU1b3k5eGtybg%3D%3D#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TiSocialInstagram />
+              </a>
             </div>
+          </nav>
+        </div>
+
+        {/* Information */}
+        <div className="flex flex-col text-current space-y-2 mb-5">
+          <h6 className="text-2xl font-bold mb-3 text-white uppercase tracking-wider">
+            Information
+          </h6>
+          <a className="text-xl text-gray-300 hover:text-white">Terms & Conditions</a>
+          <a className="text-xl text-gray-300 hover:text-white">Privacy Policy</a>
+          <a className="text-xl text-gray-300 hover:text-white">Accessibility Statement</a>
+          <a className="text-xl text-gray-300 hover:text-white">Anti Slavery</a>
+        </div>
+
+        {/* Quick Links */}
+        <div className="flex flex-col space-y-2 mb-5">
+          <h6 className="text-2xl font-bold mb-3 text-white uppercase tracking-wider">
+            Quick Links
+          </h6>
+          <div className="text-gray-300 flex flex-col space-y-2 text-xl">
+            <Link href="/" className="hover:text-white">Home</Link>
+            <Link href="/about" className="hover:text-white">About</Link>
+            <Link href="/services" className="hover:text-white">Services</Link>
+            <Link href="/portfolio" className="hover:text-white">Portfolio</Link>
+            <Link href="/contact" className="hover:text-white">Contact Us</Link>
           </div>
         </div>
-      </div>
 
-      {/* WhatsApp Float Button */}
-      <div className="fixed bottom-6 right-6">
-        <button className="btn btn-circle btn-lg bg-green-500 hover:bg-green-600 text-white border-none shadow-lg">
-          <MessageCircle className="w-6 h-6" />
-        </button>
-      </div>
+        {/* Contact Info */}
+        <div className="flex flex-col text-lg space-y-2">
+          <h6 className="text-2xl font-bold mb-3 text-white uppercase tracking-wider ">
+            Contact Info
+          </h6>
+          <p className="text-gray-300 text-xl">
+            <span className="font-medium text-white">
+              <i className="fa-solid fa-location-dot" style={{ color: "white" }} /> Address:
+            </span>
+            <br />
+            Dhaka, Bangladesh
+          </p>
+          <p className="text-gray-300 text-xl">
+            <span className="font-medium text-white">
+              <i className="fa-solid fa-phone" style={{ color: "#ffffff" }} /> Phone:
+            </span>
+            <br /> +880 170 680 3616
+          </p>
+          <p className="text-gray-300 text-xl">
+            <span className="font-medium text-white">
+              <i className="fa-solid fa-envelope" style={{ color: "#ffffff" }} /> Email:
+            </span>
+            <br />
+            contact@obliqa.com
+          </p>
+        </div>
+      </footer>
 
+      {/* Copyright */}
+      <div className="bg-[#717171] text-white flex items-center justify-center p-4">
+        <aside className="text-center">
+          <p>© 2025 OBLIQA All rights reserved.</p>
+        </aside>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Footer;
