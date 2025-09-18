@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">  {/* ✅ Always force light mode */}
+    <html lang="en">
       <body className={`${hindSiliguri.variable} antialiased bg-white text-black`}>
         {children}
       </body>

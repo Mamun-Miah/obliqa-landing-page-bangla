@@ -27,7 +27,9 @@ const page = () => {
 
   return (
     <>
-      <DiscountPopup />
+      <div>
+        <DiscountPopup />
+      </div>
       <div className="relative min-h-screen bg-[#209689]">
         {/* Navbar */}
         <div className="absolute top-4 left-6 right-6">
