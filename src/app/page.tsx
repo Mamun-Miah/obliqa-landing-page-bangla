@@ -9,21 +9,13 @@ import {
   Eye,
   BaggageClaim,
 } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 import Price from "./price";
 import Faq from "./Faq";
 import Footer from "./Footer";
 import DiscountPopup from "./DiscountPopup";
+import Navbar from "./Navbar";
 const page = () => {
 
-  const menuItems = [
-    { label: "Home", href: "https://obliqa.com/" },
-    { label: "About", href: "https://obliqa.com/about" },
-    { label: "Services", href: "https://obliqa.com/services" },
-    { label: "Portfolio", href: "https://obliqa.com/portfolio" },
-    { label: "Contact Us", href: "https://obliqa.com/contact" },
-  ];
 
   return (
     <>
@@ -32,100 +24,11 @@ const page = () => {
       </div>
       <div className="relative min-h-screen bg-[#209689]">
         {/* Navbar */}
-        <div className="absolute top-4 left-6 right-6">
-          <div className="navbar bg-transparent px-auto">
-            {/* Navbar Start: Logo + Mobile Dropdown */}
-            <div className="navbar-start">
-              <div className="dropdown">
-                <label tabIndex={0} className="btn btn-ghost lg:hidden" role="button">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="font-sans menu menu-sm dropdown-content bg-[#127a14] rounded-box z-50 mt-3 w-52 p-2 shadow-lg text-white"
-                >
-                  {menuItems.map(({ label, href }) => (
-                    <Link key={label} href={href}><li>{label}</li></Link>
-                  ))}
-                  <li className="mt-2 flex gap-2 px-2">
-                    <Link
-                      href="https://crm.obliqa.com/index.php/signin"
-                      className="btn btn-outline border-white text-white hover:bg-orange-400 hover:text-white flex-grow"
-                    >
-                      লগইন
-                    </Link>
-                    <Link
-                      href="https://crm.obliqa.com/index.php/signup"
-                      className="btn btn-outline bg-transparent border-white flex-grow hover:bg-orange-400 hover:text-white"
-                    >
-                      সাইন আপ
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <Link href="/">
-                <Image
-                  src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
-                  alt="Logo"
-                  width={150}
-                  height={50}
-                  className="cursor-pointer hidden lg:block"
-                />
-              </Link>
-            </div>
-
-            {/* Navbar Center: Menu for lg+ */}
-            <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1 text-white font-semibold text-lg gap-8">
-                {menuItems.map(({ label, href }) => (
-                  <li key={label} className="hover:text-[#ff9800]">
-                    <Link href={href}>{label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Navbar End: Logo for mobile + Login/Signup */}
-            <div className="navbar-end flex items-center gap-3">
-              {/* Show logo on mobile here */}
-              <Link href="/">
-                <Image
-                  src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
-                  alt="Logo"
-                  width={100}
-                  height={35}
-                  className="cursor-pointer lg:hidden"
-                />
-              </Link>
-
-              <Link
-                href="https://crm.obliqa.com/index.php/signin"
-                className="btn btn-outline text-white border-white hover:bg-orange-400 hover:text-white"
-              >
-                লগইন
-              </Link>
-              <Link
-                href="https://crm.obliqa.com/index.php/signup"
-                className="btn btn-outline bg-orange-500 hover:bg-transparent border-white  hover:text-white"
-              >
-                সাইন আপ
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Navbar />
 
         {/* Hero Content */}
         <div className="hero min-h-screen">
-          <div className="hero-content text-center mt-24">
+          <div className="hero-content text-center">
             <div className="max-w-xl">
               <h1 className="text-5xl leading-tight text-white font-bold">
                 নিশ্চিন্তে সার্ভিস নিন,<br /> পরে পেমেন্ট করুন!
@@ -333,7 +236,7 @@ const page = () => {
       {/* Footer CTA Section */}
       <Footer />
 
-  </>
+    </>
   );
 };
 
