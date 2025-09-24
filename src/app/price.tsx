@@ -77,8 +77,12 @@ export default function Price() {
                   <span className="text-sm">ডেলিভারি ৭-১০ কার্যদিবস</span>
                 </li>
               </ul>
-              <button className="btn btn-outline btn-accent w-full">
-                অর্ডার করুন এখনি
+              <button onClick={() =>
+                document
+                  .getElementById("contact-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              } className="btn btn-outline btn-accent w-full">
+                যোগাযোগ করুন এখনি
               </button>
             </div>
           </div>
@@ -159,7 +163,11 @@ export default function Price() {
                   <span className="text-sm">ডেলিভারি ৭-১০ কার্যদিবস</span>
                 </li>
               </ul>
-              <button className="btn btn-accent w-full">অর্ডার করুন এখনি</button>
+              <button onClick={() =>
+                document
+                  .getElementById("contact-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              } className="btn btn-accent w-full">যোগাযোগ করুন এখনি</button>
             </div>
           </div>
 
@@ -230,8 +238,12 @@ export default function Price() {
                   <span className="text-sm">ডেলিভারি ৭-১৫ কর্মদিবস</span>
                 </li>
               </ul>
-              <button className="btn btn-outline btn-accent w-full">
-                অর্ডার করুন এখনি
+              <button onClick={() =>
+                document
+                  .getElementById("contact-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              } className="btn btn-outline btn-accent w-full">
+                যোগাযোগ করুন এখনি
               </button>
             </div>
           </div>

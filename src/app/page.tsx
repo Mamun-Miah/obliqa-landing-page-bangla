@@ -1,3 +1,6 @@
+"use client";
+
+
 import React from "react";
 import {
   MessageCircle,
@@ -14,6 +17,7 @@ import Faq from "./Faq";
 import Footer from "./Footer";
 import DiscountPopup from "./DiscountPopup";
 import Navbar from "./Navbar";
+import ContactPage from "./contact/page";
 const page = () => {
 
 
@@ -27,7 +31,7 @@ const page = () => {
         <Navbar />
 
         {/* Hero Content */}
-        <div className="hero min-h-screen">
+        <div className="hero pt-8">
           <div className="hero-content text-center">
             <div className="max-w-xl">
               <h1 className="text-5xl leading-tight text-white font-bold">
@@ -37,10 +41,14 @@ const page = () => {
                 আপনার ব্যবসার জন্য নিন সাশ্রয়ী, ঝামেলামুক্ত এবং রেডি টু ইউজ ওয়েবসাইট, যা আপনার ব্যাবসা কে করবে আরও উন্নত।
                 আমাদের প্রিমিয়াম অফার নিশ্চিত করছে ইউজার ফ্রেন্ডলি ডিজাইন, কার্যকরী ফিচার এবং দ্রুত ফলাফল। আজই শুরু করুন এবং আপনার অনলাইন ব্যাবসা শক্তিশালী করুন!
               </p>
-              <button
+              <button onClick={() =>
+                document
+                  .getElementById("contact-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
                 className="btn btn-outline border-white bg-orange-400 hover:text-white hover:bg-transparent duration-300"
               >
-                অর্ডার করতে চাই
+                বিস্তারিত জানতে চাই
               </button>
             </div>
           </div>
@@ -232,7 +240,8 @@ const page = () => {
         {/* FAQ Section */}
         <Faq />
       </div>
-
+      {/* ContactUS */}
+      <ContactPage />
       {/* Footer CTA Section */}
       <Footer />
 

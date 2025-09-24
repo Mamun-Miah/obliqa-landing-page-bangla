@@ -14,12 +14,12 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="sticky top-0 left-0 right-0 z-50 bg-[#209689]/80 backdrop-blur-md">
+    <div className="top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
       <div className="navbar px-4 lg:px-8">
         {/* Left Side (Logo + Mobile Menu) */}
         <div className="navbar-start">
           {/* Mobile Dropdown */}
-          <div className="dropdown">
+          {/* <div className="dropdown">
             <label
               tabIndex={0}
               className="btn btn-ghost lg:hidden"
@@ -64,10 +64,10 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Logo (Desktop) */}
-          <Link href="/" className="hidden lg:block">
+          <Link href="#">
             <Image
               src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
               alt="Logo"
@@ -79,7 +79,7 @@ export default function Navbar() {
         </div>
 
         {/* Center Menu (Desktop) */}
-        <div className="navbar-center hidden lg:flex">
+        {/* <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-white font-semibold text-xl gap-8 font-normal">
             {menuItems.map(({ label, href }) => (
               <li key={label} className="hover:text-[#ff9800]">
@@ -87,12 +87,12 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {/* Right Side (Mobile Logo + Login/Signup) */}
         <div className="navbar-end flex items-center gap-3">
           {/* Mobile Logo */}
-          <Link href="/" className="lg:hidden">
+          {/* <Link href="/" className="lg:hidden">
             <Image
               src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
               alt="Logo"
@@ -100,7 +100,7 @@ export default function Navbar() {
               height={35}
               className="cursor-pointer"
             />
-          </Link>
+          </Link> */}
 
           {/* Buttons */}
           <Link

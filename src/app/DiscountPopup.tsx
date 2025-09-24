@@ -13,7 +13,6 @@ export default function ObliQADiscountPopup() {
   })
 
   useEffect(() => {
-    // Page লোড হলেই popup show হবে
     setShow(true)
   }, [])
 
@@ -50,7 +49,7 @@ export default function ObliQADiscountPopup() {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 120, damping: 10 }}
-          className="relative bg-white p-8 rounded-2xl shadow-2xl max-w-md m-4"
+          className="flex items-center justify-center relative bg-white p-8 rounded-2xl shadow-2xl max-w-md lg:h-[500px]"
         >
           {/* Close Button */}
           <button
@@ -68,10 +67,10 @@ export default function ObliQADiscountPopup() {
             </div>
 
             {/* Special Offer Section */}
-            <div className="mb-6">
+            <div className="mb-2">
               {/* Megaphone Icon with Bengali Text */}
-              <div className="flex items-center justify-center mb-4">
-                <div className="relative">
+              <div className="flex items-center justify-center mb-2">
+                {/* <div className="relative">
                   <div className="bg-orange-100 rounded-full p-3 border-2 border-orange-300">
                     <svg className="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
@@ -80,6 +79,9 @@ export default function ObliQADiscountPopup() {
                   <div className="absolute -top-2 -right-2 bg-orange-200 rounded-full px-3 py-1 border border-orange-400">
                     <span className="text-sm font-bold text-gray-800">বিশেষ অফার</span>
                   </div>
+                </div> */}
+                <div>
+                  <p className="text-3xl font-bold text-black">বিশেষ ছাড় !</p>
                 </div>
               </div>
 
@@ -92,14 +94,14 @@ export default function ObliQADiscountPopup() {
                 </div>
               </div>
 
-              <div className="mb-4 p-4 bg-red-50 rounded-lg border-2 border-red-200">
-                <p className="text-red-600 font-bold text-sm mb-2">অফার শেষ হবে:</p>
+              <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-4 mb-4 p-4 bg-red-50 rounded-lg border-2 border-red-200">
+                <p className="text-red-600 font-bold text-sm lg:text-lg mb-2">অফার শেষ হবে:</p>
                 <div className="flex justify-center gap-2">
                   <div className="bg-red-600 text-white px-3 py-2 rounded-lg text-center min-w-[50px]">
                     <div className="text-lg font-bold">{timeLeft.days}</div>
                     <div className="text-xs">দিন</div>
                   </div>
-                  <div className="bg-red-600 text-white px-3 py-2 rounded-lg text-center min-w-[50px]">
+                  <div className="bg-red-600 text-white px-3 py-2 rounded-lg text-center min-w-[20px]">
                     <div className="text-lg font-bold">{timeLeft.hours}</div>
                     <div className="text-xs">ঘন্টা</div>
                   </div>

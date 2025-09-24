@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="grid lg:gap-8 lg:grid-cols-4 bg-[#263238] text-white min-h-80 py-12 px-5 pt-8">
+      <footer className="grid lg:gap-8 lg:grid-cols-3 bg-[#263238] text-white min-h-80 py-12 px-5 pt-8">
         {/* Logo + Social Links */}
         <div>
           <nav className="flex flex-col gap-4 items-center my-4">
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col space-y-2 mb-5">
+        {/* <div className="flex flex-col space-y-2 mb-5">
           <h6 className="text-2xl font-bold mb-3 text-white uppercase tracking-wider">
             Quick Links
           </h6>
@@ -68,7 +68,7 @@ const Footer = () => {
             <Link href="/portfolio" className="hover:text-white">Portfolio</Link>
             <Link href="/contact" className="hover:text-white">Contact Us</Link>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact Info */}
         <div className="flex flex-col text-lg space-y-2">
