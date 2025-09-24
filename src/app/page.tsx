@@ -26,12 +26,12 @@ const page = () => {
       <div>
         <DiscountPopup />
       </div>
-      <div className="relative min-h-screen bg-[#209689]">
+      <div className="relative lg:min-h-screen bg-[#209689]">
         {/* Navbar */}
         <Navbar />
 
         {/* Hero Content */}
-        <div className="hero pt-8">
+        <div className="hero pt-8 pb-4">
           <div className="hero-content text-center">
             <div className="max-w-xl">
               <h1 className="text-5xl leading-tight text-white font-bold">
