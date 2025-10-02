@@ -84,6 +84,11 @@ const page = () => {
               </div>
 
               <button
+              onClick={() =>
+                document
+                  .getElementById("contact-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
                 className="btn btn-outline shadow border-black btn-lg bg-orange-400 hover:text-orange-400 hover:bg-transparent duration-300"
               >
                 কথা বলতে চাই
