@@ -215,7 +215,7 @@ const ContactPage = () => {
                           d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                         />
                       </svg>
-                      <span className="font-semibold">২৪/৭ অনলাইন সাপোর্ট</span>
+                      <span className="font-semibold">প্রতিদিন অনলাইন সাপোর্ট</span>
                     </div>
                     <span className="font-bold">সবসময় সক্রিয়</span>
                   </div>
@@ -232,7 +232,7 @@ const ContactPage = () => {
                   ].map((day) => (
                     <div className="flex justify-between" key={day}>
                       <span className="text-gray-600">{day}</span>
-                      <span className="text-gray-800 font-medium">সকাল ৯টা - সন্ধ্যা ৬টা</span>
+                      <span className="text-gray-800 font-medium">⏰ সকাল ৯টা – রাত ১০টা</span>
                     </div>
                   ))}
                 </div>
