@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function ObliQADiscountPopup() {
   const [show, setShow] = useState(false)
@@ -49,7 +50,7 @@ export default function ObliQADiscountPopup() {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 120, damping: 10 }}
-          className="flex items-center justify-center relative bg-white p-8 rounded-2xl shadow-2xl max-w-md lg:h-[500px]"
+          className="flex items-center justify-center relative bg-[#209689] p-8 rounded-2xl shadow-2xl max-w-md lg:h-[500px]"
         >
           {/* Close Button */}
           <button
@@ -61,9 +62,17 @@ export default function ObliQADiscountPopup() {
 
           <div className="text-center">
             {/* Company Logo and Name */}
-            <div className="mb-6">
-              <h1 className="text-3xl font-bold text-orange-500 mb-1">OBLIQA</h1>
-              <p className="text-gray-600 text-sm font-medium">OBLIQA IT SOLUTIONS</p>
+            <div className="mb-6 flex justify-center items-center">
+              {/* <h1 className="text-3xl font-bold text-orange-500 mb-1">OBLIQA</h1>
+              <p className="text-gray-600 text-sm font-medium">OBLIQA IT SOLUTIONS</p> */}
+              <Image
+                            src='./logo.svg'
+                            alt="Logo"
+                            width={150}
+                            height={50}
+                            className="cursor-pointer"
+                          />
+              
             </div>
 
             {/* Special Offer Section */}
@@ -81,7 +90,7 @@ export default function ObliQADiscountPopup() {
                   </div>
                 </div> */}
                 <div>
-                  <p className="text-3xl font-bold text-black">বিশেষ ছাড় !</p>
+                  <p className="text-3xl font-bold text-white">বিশেষ ছাড় !</p>
                 </div>
               </div>
 
@@ -117,17 +126,27 @@ export default function ObliQADiscountPopup() {
               </div>
 
               {/* Offer Details */}
-              <div className="text-gray-700 text-sm mb-6 leading-relaxed">
+              <div className="text-white text-sm mb-6 leading-relaxed">
                 <p>ওয়েব ডিজাইন ও সফটওয়্যার ডেভেলপমেন্ট</p>
                 <p>সেবায় ৫০% ছাড়।</p>
-                <p className="mt-2 font-medium">সীমিত সময়ের জন্য প্রযোজ্য।</p>
+                <p className="mt-2 font-medium">সীমিত সময়ের জন্য প্রযোজ্য !</p>
               </div>
             </div>
 
             {/* Order Button */}
             <button
-              onClick={() => setShow(false)}
-              className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors duration-200 text-lg"
+              
+              onClick={() => {
+             // Hide the element
+              setShow(false);
+
+              // Scroll to the contact section smoothly
+              const contactSection = document.getElementById("contact-section");
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+              className="bg-orange-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors duration-200 text-lg"
             >
               অর্ডার করুন এখনি
             </button>

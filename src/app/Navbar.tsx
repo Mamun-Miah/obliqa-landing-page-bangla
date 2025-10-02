@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
-  const menuItems = [
-    { label: "Home", href: "https://obliqa.com/" },
-    { label: "About", href: "https://obliqa.com/about" },
-    { label: "Services", href: "https://obliqa.com/services" },
-    { label: "Portfolio", href: "https://obliqa.com/portfolio" },
-    { label: "Contact Us", href: "/contact" },
-  ];
+  // const menuItems = [
+  //   { label: "Home", href: "https://obliqa.com/" },
+  //   { label: "About", href: "https://obliqa.com/about" },
+  //   { label: "Services", href: "https://obliqa.com/services" },
+  //   { label: "Portfolio", href: "https://obliqa.com/portfolio" },
+  //   { label: "Contact Us", href: "/contact" },
+  // ];
 
   return (
     <div className="top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
