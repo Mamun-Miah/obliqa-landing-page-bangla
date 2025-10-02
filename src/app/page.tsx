@@ -23,6 +23,7 @@ const page = () => {
 
   return (
     <>
+    
       <div>
         <DiscountPopup />
       </div>

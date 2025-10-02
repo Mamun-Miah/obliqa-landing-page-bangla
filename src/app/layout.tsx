@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Hind_Siliguri } from "next/font/google";
+import TawkTo from "./TawkTo";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${hindSiliguri.variable} antialiased bg-white text-black`}>
         {children}
+          <TawkTo />
       </body>
     </html>
   );
