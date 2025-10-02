@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 import {
   TiSocialFacebook,
   TiSocialInstagram,
@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="grid lg:gap-8 lg:grid-cols-3 bg-[#263238] text-white min-h-80 py-12 px-5 pt-8">
+      <footer className="grid lg:gap-8 lg:grid-cols-5 bg-[#263238] text-white min-h-80 py-12 px-5 pt-8">
         {/* Logo + Social Links */}
         <div>
           <nav className="flex flex-col gap-4 items-center my-4">
@@ -44,21 +44,29 @@ const Footer = () => {
             </div>
           </nav>
         </div>
-
+<div></div>
         {/* Information */}
         <div className="flex flex-col text-current space-y-2 mb-5">
           <h6 className="text-2xl font-bold mb-3 text-white uppercase tracking-wider">
-            Information
+            Quick Links
           </h6>
-          <a className="text-xl text-gray-300 hover:text-white">Terms & Conditions</a>
-          <a className="text-xl text-gray-300 hover:text-white">Privacy Policy</a>
-          <a className="text-xl text-gray-300 hover:text-white">Accessibility Statement</a>
-          <a className="text-xl text-gray-300 hover:text-white">Anti Slavery</a>
+           <Link
+            href="https://crm.obliqa.com/index.php/signin"
+            className="btn btn-outline text-white border-white hover:bg-orange-400 hover:text-white"
+          >
+            লগইন
+          </Link>
+          <Link
+            href="https://crm.obliqa.com/index.php/signup"
+            className="btn bg-orange-500 border-white text-white hover:bg-transparent hover:border-orange-400"
+          >
+            সাইন আপ
+          </Link>
         </div>
 
         {/* Quick Links */}
-        {/* <div className="flex flex-col space-y-2 mb-5">
-          <h6 className="text-2xl font-bold mb-3 text-white uppercase tracking-wider">
+        <div className="flex flex-col space-y-2 mb-5">
+          {/* <h6 className="text-2xl font-bold mb-3 text-white uppercase tracking-wider">
             Quick Links
           </h6>
           <div className="text-gray-300 flex flex-col space-y-2 text-xl">
@@ -67,8 +75,8 @@ const Footer = () => {
             <Link href="/services" className="hover:text-white">Services</Link>
             <Link href="/portfolio" className="hover:text-white">Portfolio</Link>
             <Link href="/contact" className="hover:text-white">Contact Us</Link>
-          </div>
-        </div> */}
+          </div> */}
+        </div>
 
         {/* Contact Info */}
         <div className="flex flex-col text-lg space-y-2">
