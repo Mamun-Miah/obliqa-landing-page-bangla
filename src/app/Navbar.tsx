@@ -69,7 +69,7 @@ export default function Navbar() {
           {/* Logo (Desktop) */}
           <Link href="#">
             <Image
-              src="https://obliqa.com/assets/logo-v5XmxzuU.svg"
+              src='./logo.svg'
               alt="Logo"
               width={150}
               height={50}
