@@ -25,6 +25,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+          <head>
+        {/* Google Tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KZZ88RC249"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KZZ88RC249');
+          `}
+        </Script>
+      </head>
       <body className={`${hindSiliguri.variable} antialiased bg-white text-black`}>
         {children}
           <TawkTo />
