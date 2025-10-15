@@ -5,7 +5,7 @@ import React from "react"
 
 export default function Price() {
   return (
-    <div>
+    <div id="pricing">
       <div className="text-gray-600 px-2">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-8">
