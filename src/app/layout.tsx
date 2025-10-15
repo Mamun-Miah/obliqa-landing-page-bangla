@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Hind_Siliguri } from "next/font/google";
 import TawkTo from "./TawkTo";
+import Script from "next/script";
 
 const hindSiliguri = Hind_Siliguri({
   subsets: ["bengali"],
