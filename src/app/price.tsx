@@ -12,7 +12,7 @@ export default function Price() {
             আমাদের ওয়েবসাইট প্যাকেজ সমূহ
           </h2>
         </div>
-
+   
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Standard Package */}
           <div className="card bg-white shadow-lg relative">
