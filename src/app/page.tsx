@@ -59,7 +59,7 @@ const page = () => {
                       .getElementById("pricing")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="btn btn-outline border-white bg-orange-400 hover:text-white hover:bg-transparent duration-300"
+                  className="btn btn-outline border-white bg-orange-400 hover:text-white hover:bg-transparent duration-300 text-black"
                 >
                   প্যাকেজগুলো দেখুন
                 </button>
