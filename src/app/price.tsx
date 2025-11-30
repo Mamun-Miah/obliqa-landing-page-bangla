@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { FiSend } from "react-icons/fi";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 export default function Price() {
   const [formData, setFormData] = useState({
