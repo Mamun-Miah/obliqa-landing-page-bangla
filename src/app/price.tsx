@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Check } from "lucide-react";
 import { FiSend } from "react-icons/fi";
 import emailjs from "emailjs-com";
@@ -16,11 +16,11 @@ export default function Price() {
 
   const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setStatus("Sending...");
 
@@ -328,7 +328,7 @@ export default function Price() {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              rows="5"
+              rows={5}
               required
               className="w-full px-4 py-3 border border-black rounded-lg focus:ring-2 text-gray-900 placeholder:text-gray-400"
               placeholder="আপনার প্রয়োজনগুলো বিস্তারিত লিখুন..."
